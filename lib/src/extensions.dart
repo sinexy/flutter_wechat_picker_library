@@ -42,15 +42,8 @@ extension BrightnessExtension on Brightness {
 
 /// Common extensions for the [Color].
 extension ColorExtension on Color {
-  /// The alpha channel of this color in an 8 bit value.
-  ///
-  /// A value of 0 means this color is fully transparent. A value of 255 means
-  /// this color is fully opaque.
-  // ignore: deprecated_member_use
-  int get _alpha => (0xff000000 & value) >> 24;
-
   /// Determine the transparent color by 0 alpha.
-  bool get isTransparent => _alpha == 0x00;
+  bool get isTransparent => alpha == 0x00;
 }
 
 /// Common extensions for the [ThemeData].
